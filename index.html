@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  html, body {
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    margin: 2rem;
+  }
+</style>
+</head>
+<body>
+<img
+  src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+  width="258"
+  height="374"
+  onload="createPlaceholder(this)"
+>
+
+
+<img
+  src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+  width="400"
+  height="400"
+  onload="createPlaceholder(this)"
+>
+
+<img
+  src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+  width="400"
+  height="700"
+  onload="createPlaceholder(this)"
+>
+
+<img
+  src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+  width="700"
+  height="200"
+  onload="createPlaceholder(this)"
+>
+
+
+
+<script>
+function createPlaceholder(image) {
+  console.log('createPlaceholder fired');
+
+  image.onload = null;
+
+  var canvas = document.createElement('canvas');
+  canvas.width = image.width;
+  canvas.height = image.height;
+
+  var ctx = canvas.getContext('2d');
+
+  ctx.fillStyle = '#F7F7F7';
+  ctx.fillRect(0, 0, image.width, image.height);
+
+  var _img = new Image();
+  _img.src = 'data:image/jpeg;base64,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';
+  _img.onload = function() {
+    var x = image.width / 2 - 258 / 2;
+    var y = image.height /2 - 374 / 2;
+
+    ctx.drawImage(_img, x, y);
+
+    image.src = canvas.toDataURL();
+  }
+
+
+
+}
+
+
+
+
+</script>
+
+
+</body>
+</html>
