@@ -17,6 +17,7 @@
 
   img {
     margin: 2rem;
+    visibility: hidden;
   }
 </style>
 </head>
@@ -44,7 +45,7 @@
 >
 
 <img
-  src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
   width="700"
   height="200"
   onload="createPlaceholder(this)"
@@ -76,6 +77,7 @@ function createPlaceholder(image) {
     ctx.drawImage(_img, x, y);
 
     image.src = canvas.toDataURL();
+    image.style.visibility = 'visible';
   }
 
 
